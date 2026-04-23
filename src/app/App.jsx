@@ -1,7 +1,8 @@
 const React = require("react");
+const { AppRouter } = require("./router");
 
 function App() {
-    return <div>Пустой проект</div>;
+    return <AppRouter />;
 }
 
 module.exports = App;

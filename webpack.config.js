@@ -44,6 +44,7 @@ module.exports = {
         static: path.resolve(__dirname, "dist"),
         port: 3000,
         open: true,
-        hot: true
+        hot: true,
+        historyApiFallback: true
     }
 };
