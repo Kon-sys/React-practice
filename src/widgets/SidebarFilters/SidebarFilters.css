@@ -1,0 +1,127 @@
+.sidebar-filters {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 204px;
+}
+
+.sidebar-filters__main-button--active,
+.sidebar-filters__sub-button--active,
+.sidebar-filters__nested-button--active {
+    color: #ef5d6c;
+}
+
+.sidebar-filters__title {
+    margin: 0;
+    color: rgba(0, 0, 0, 0.5);
+    font-family: "SF UI Display", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 100%;
+}
+
+.sidebar-filters__list {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-filters__section {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-filters__main-button,
+.sidebar-filters__sub-button,
+.sidebar-filters__nested-button {
+    width: 100%;
+    border: none;
+    background: transparent;
+    font-family: "SF UI Display", Arial, sans-serif;
+    text-align: left;
+}
+
+.sidebar-filters__main-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 52px;
+    padding: 0;
+    color: #333333;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 100%;
+}
+
+.sidebar-filters__sub-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-filters__sub-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-filters__sub-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 36px;
+    padding: 0;
+    color: rgba(0, 0, 0, 0.55);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 100%;
+}
+
+.sidebar-filters__nested-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px 0 16px 8px;
+}
+
+.sidebar-filters__nested-button {
+    padding: 0;
+    color: rgba(0, 0, 0, 0.55);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 100%;
+}
+
+.sidebar-filters__chevron {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.sidebar-filters__chevron::before,
+.sidebar-filters__chevron::after {
+    content: "";
+    position: absolute;
+    top: 9px;
+
+    width: 10px;
+    height: 2px;
+
+    border-radius: 2px;
+    background-color: #333333;
+}
+
+.sidebar-filters__chevron::before {
+    left: 2px;
+    transform: rotate(45deg);
+}
+
+.sidebar-filters__chevron::after {
+    right: 2px;
+    transform: rotate(-45deg);
+}
+
+.sidebar-filters__chevron--open::before {
+    transform: rotate(-45deg);
+}
+
+.sidebar-filters__chevron--open::after {
+    transform: rotate(45deg);
+}

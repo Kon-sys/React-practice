@@ -1,0 +1,150 @@
+.catalog-toolbar {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+}
+
+.catalog-toolbar__filters {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    width: 100%;
+    min-height: 40px;
+}
+
+.catalog-toolbar__select {
+    width: 139px;
+    height: 40px;
+
+    padding: 0 34px 0 12px;
+
+    border: none;
+    border-radius: 20px;
+    background-color: #ffffff;
+
+    color: rgba(51, 51, 51, 0.7);
+    font-family: "SF UI Display", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 100%;
+
+    cursor: pointer;
+
+    appearance: none;
+    background-image: linear-gradient(45deg, transparent 50%, #000000 50%),
+    linear-gradient(135deg, #000000 50%, transparent 50%);
+    background-position:
+            calc(100% - 17px) 18px,
+            calc(100% - 13px) 18px;
+    background-size:
+            4px 4px,
+            4px 4px;
+    background-repeat: no-repeat;
+}
+
+.catalog-toolbar__select:focus {
+    outline: none;
+}
+
+.catalog-toolbar__sale {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 139px;
+    height: 40px;
+
+    padding: 0 12px;
+
+    border: none;
+    border-radius: 20px;
+    background-color: #ffffff;
+
+    color: rgba(51, 51, 51, 0.7);
+    font-family: "SF UI Display", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 100%;
+
+    cursor: pointer;
+}
+
+.catalog-toolbar__sale--active {
+    background-color: #f4717a;
+    color: #ffffff;
+}
+
+.catalog-toolbar__sale-close {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1;
+}
+
+.catalog-toolbar__chips {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+
+    width: 100%;
+}
+
+.catalog-toolbar__chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    width: auto;
+    height: 32px;
+
+    padding: 6px 12px;
+
+    border: none;
+    border-radius: 20px;
+    background-color: #e2e2e4;
+
+    color: rgba(51, 51, 51, 0.7);
+    font-family: "SF UI Display", Arial, sans-serif;
+
+    cursor: pointer;
+}
+
+.catalog-toolbar__chip-text {
+    color: rgba(51, 51, 51, 0.7);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 100%;
+    white-space: nowrap;
+}
+
+.catalog-toolbar__chip-close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 20px;
+    height: 20px;
+
+    color: rgba(51, 51, 51, 0.7);
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 1;
+}
+
+.catalog-toolbar__clear {
+    height: 32px;
+    padding: 0 12px;
+
+    border: none;
+    border-radius: 16px;
+    background-color: transparent;
+
+    color: #f4717a;
+    font-family: "SF UI Display", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+
+    cursor: pointer;
+}

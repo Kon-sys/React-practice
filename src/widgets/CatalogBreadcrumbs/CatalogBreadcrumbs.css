@@ -1,0 +1,31 @@
+.catalog-breadcrumbs {
+    display: flex;
+    align-items: center;
+    height: 14px;
+}
+
+.catalog-breadcrumbs__item {
+    padding: 0;
+    border: none;
+    background: transparent;
+
+    color: rgba(255, 45, 85, 0.5);
+    font-family: "SF UI Display", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 100%;
+
+    cursor: pointer;
+}
+
+.catalog-breadcrumbs__item--current {
+    color: #333333;
+    cursor: default;
+}
+
+.catalog-breadcrumbs__chevron {
+    margin: 0 14px;
+    color: #333333;
+    font-size: 14px;
+    line-height: 1;
+}

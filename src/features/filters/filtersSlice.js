@@ -1,22 +1,43 @@
 const { createSlice } = require("@reduxjs/toolkit");
 
+const initialState = {
+    sort: "asc",
+    search: "",
+    gender: "",
+    category: "",
+    categoryPath: [],
+    color: "",
+    size: "",
+    brand: "",
+    price: "",
+    condition: "",
+    shop: "",
+    rating: "",
+    stock: "",
+    sale: false,
+};
+
 const filtersSlice = createSlice({
     name: "filters",
-    initialState: {
-        search: "",
-        category: "",
-    },
+    initialState,
     reducers: {
-        setSearch(state, action) {
-            state.search = action.payload;
+        setFilter(state, action) {
+            const { name, value } = action.payload;
+            state[name] = value;
         },
-        setCategory(state, action) {
-            state.category = action.payload;
+
+        resetFilter(state, action) {
+            const name = action.payload;
+            state[name] = initialState[name];
         },
-        resetFilters(state) {
-            state.search = "";
-            state.category = "";
+
+        resetFilters() {
+            return initialState;
         },
+
+        setCategoryPath(state, action) {
+            state.categoryPath = action.payload;
+        }
     },
 });
 

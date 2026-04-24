@@ -1,0 +1,34 @@
+.sort-bar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    width: max-content;
+    height: 14px;
+
+    margin-top: 32px;
+
+    font-family: "SF UI Display", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 100%;
+}
+
+.sort-bar__label {
+    color: rgba(51, 51, 51, 0.5);
+}
+
+.sort-bar__button {
+    padding: 0;
+    border: none;
+    background: transparent;
+
+    color: rgba(51, 51, 51, 0.7);
+    font: inherit;
+
+    cursor: pointer;
+}
+
+.sort-bar__button--active {
+    color: #f4717a;
+}

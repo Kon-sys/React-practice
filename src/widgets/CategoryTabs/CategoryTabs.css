@@ -1,0 +1,51 @@
+.category-tabs {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+    height: 72px;
+    padding: 16px 0;
+
+    background-color: #ffffff;
+}
+
+.category-tabs__panel {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    width: 413px;
+    height: 40px;
+
+    padding: 0 24px;
+
+    border: 1px solid #e4e4e4;
+    border-radius: 40px;
+}
+
+.category-tabs__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 14px;
+
+    padding: 0;
+    border: none;
+    background: transparent;
+
+    color: #111111;
+    font-family: "SF UI Display", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 100%;
+
+    cursor: pointer;
+}
+
+.category-tabs__divider {
+    width: 1px;
+    height: 40px;
+
+    background-color: #dbdbdb;
+}
