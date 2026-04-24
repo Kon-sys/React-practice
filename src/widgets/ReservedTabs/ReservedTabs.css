@@ -1,0 +1,44 @@
+.reserved-tabs {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 24px;
+
+    width: 100%;
+    height: 18px;
+}
+
+.reserved-tabs__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+
+    padding: 0;
+    border: none;
+    background: transparent;
+
+    cursor: pointer;
+}
+
+.reserved-tabs__text {
+    font-family: "SF UI Display", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 100%;
+    color: #333333;
+}
+
+.reserved-tabs__line {
+    width: 100%;
+    height: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.reserved-tabs__item--active .reserved-tabs__text {
+    color: #ff2d55;
+}
+
+.reserved-tabs__item--active .reserved-tabs__line {
+    border-bottom-color: #ff2d55;
+}

@@ -1,0 +1,25 @@
+.reserved-page {
+    min-height: calc(100vh - 160px);
+    background-color: #f4f4f6;
+}
+
+.reserved-page__container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+
+    padding-top: 24px;
+}
+
+.reserved-page__content {
+    margin-top: 24px;
+}
+
+.reserved-page__placeholder {
+    margin: 0;
+    text-align: center;
+
+    color: rgba(51, 51, 51, 0.6);
+    font-family: "SF UI Display", Arial, sans-serif;
+    font-size: 14px;
+}
