@@ -1,25 +1,12 @@
 import React from "react";
-import { useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { removeReserved } from "../entities/reserved/model/reservedSlice.js";
 
-import Header from "../widgets/Header/Header";
-import CategoryTabs from "../widgets/CategoryTabs/CategoryTabs";
-import ReservedTabs from "../widgets/ReservedTabs/ReservedTabs";
-import ReservedShopGroup from "../widgets/ReservedShopGroup/ReservedShopGroup";
+import Header from "../widgets/Header/Header.jsx";
+import CategoryTabs from "../widgets/CategoryTabs/CategoryTabs.jsx";
+import ReservedBoard from "../widgets/ReservedBoard/ReservedBoard.jsx";
 
 import "./styles/ReservedPage.css";
 
 function ReservedPage() {
-    const [activeTab, setActiveTab] = useState("reserved");
-    const reservedItems = useSelector((state) => state.reserved.items);
-
-    const dispatch = useDispatch();
-
-    function handleRemoveReserved(productId) {
-        dispatch(removeReserved(productId));
-    }
-
     return (
         <>
             <Header />
@@ -27,26 +14,7 @@ function ReservedPage() {
 
             <main className="reserved-page">
                 <div className="reserved-page__container">
-                    <ReservedTabs activeTab={activeTab} onTabChange={setActiveTab} />
-
-                    <div className="reserved-page__content">
-                        {activeTab === "reserved" ? (
-                            reservedItems.length > 0 ? (
-                                <ReservedShopGroup
-                                    shopName="ReStyle Hub"
-                                    location="23A Gran Via"
-                                    workHours="MO - FR: 9AM - 8PM | SA - SU: 9AM - 8PM"
-                                    reservedTime="WED 14.04.2022 - FRI 16.04.2022"
-                                    products={reservedItems}
-                                    onRemove={handleRemoveReserved}
-                                />
-                            ) : (
-                                <p className="reserved-page__placeholder">No reserved products yet</p>
-                            )
-                        ) : (
-                            <p className="reserved-page__placeholder">Purchased products will be here</p>
-                        )}
-                    </div>
+                    <ReservedBoard />
                 </div>
             </main>
         </>
