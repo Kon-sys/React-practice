@@ -162,3 +162,35 @@
     font-weight: 700;
     line-height: 100%;
 }
+
+@media (max-width: 1024px) {
+    .header {
+        height: auto;
+    }
+
+    .header__container {
+        flex-wrap: wrap;
+        gap: 16px;
+        padding: 16px 20px;
+    }
+
+    .header__search {
+        order: 3;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .header__links {
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 720px) {
+    .header__links {
+        display: none;
+    }
+
+    .header__icons {
+        margin-left: auto;
+    }
+}

@@ -30,3 +30,18 @@
     font-family: "SF UI Display", Arial, sans-serif;
     font-size: 14px;
 }
+
+@media (max-width: 900px) {
+    .catalog-board__container {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .catalog-board__content {
+        width: 100%;
+    }
+
+    .sidebar-filters {
+        width: 100%;
+    }
+}

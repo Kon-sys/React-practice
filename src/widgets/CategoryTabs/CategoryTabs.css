@@ -49,3 +49,15 @@
 
     background-color: #dbdbdb;
 }
+
+@media (max-width: 520px) {
+    .category-tabs {
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding: 16px 20px;
+    }
+
+    .category-tabs__panel {
+        flex-shrink: 0;
+    }
+}

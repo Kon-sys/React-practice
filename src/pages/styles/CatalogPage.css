@@ -3,3 +3,9 @@
     padding: 24px 20px 48px;
     background-color: #f4f4f6;
 }
+
+@media (max-width: 560px) {
+    .catalog-page {
+        padding: 16px 12px 32px;
+    }
+}

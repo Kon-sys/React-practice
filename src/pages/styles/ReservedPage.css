@@ -10,3 +10,10 @@
 
     padding-top: 24px;
 }
+
+@media (max-width: 1320px) {
+    .reserved-page__container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}

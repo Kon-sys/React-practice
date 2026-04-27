@@ -7,3 +7,10 @@
     padding: 48px 20px;
     background-color: #f4f4f6;
 }
+
+@media (max-width: 560px) {
+    .auth-page {
+        align-items: flex-start;
+        padding: 24px 16px;
+    }
+}

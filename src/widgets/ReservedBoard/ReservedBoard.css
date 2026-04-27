@@ -10,3 +10,9 @@
     font-family: "SF UI Display", Arial, sans-serif;
     font-size: 14px;
 }
+
+@media (max-width: 560px) {
+    .reserved-board__content {
+        margin-top: 20px;
+    }
+}

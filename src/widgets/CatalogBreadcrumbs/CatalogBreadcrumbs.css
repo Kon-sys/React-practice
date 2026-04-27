@@ -29,3 +29,14 @@
     font-size: 14px;
     line-height: 1;
 }
+
+@media (max-width: 560px) {
+    .catalog-breadcrumbs {
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .catalog-breadcrumbs__chevron {
+        margin: 0 8px;
+    }
+}

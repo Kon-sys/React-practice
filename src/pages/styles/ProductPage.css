@@ -83,3 +83,39 @@
 
     cursor: pointer;
 }
+
+@media (max-width: 900px) {
+    .product-page__container {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .product-page__image-block img {
+        width: 100%;
+        height: auto;
+        max-height: 520px;
+    }
+
+    .product-page__info {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 560px) {
+    .product-page {
+        padding: 24px 16px;
+    }
+
+    .product-page__title {
+        font-size: 24px;
+    }
+
+    .product-page__actions {
+        flex-direction: column;
+    }
+
+    .product-page__cart,
+    .product-page__favorite {
+        width: 100%;
+    }
+}

@@ -148,3 +148,16 @@
 
     cursor: pointer;
 }
+
+@media (max-width: 1180px) {
+    .catalog-toolbar__filters {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 560px) {
+    .catalog-toolbar__select,
+    .catalog-toolbar__sale {
+        width: 100%;
+    }
+}

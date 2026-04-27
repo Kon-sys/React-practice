@@ -32,3 +32,12 @@
 .sort-bar__button--active {
     color: #f4717a;
 }
+
+@media (max-width: 560px) {
+    .sort-bar {
+        flex-wrap: wrap;
+        width: 100%;
+        height: auto;
+        row-gap: 8px;
+    }
+}

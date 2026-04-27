@@ -187,3 +187,31 @@
     font-weight: 400;
     line-height: 100%;
 }
+
+@media (max-width: 560px) {
+    .product-card {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .product-card__image-wrapper,
+    .product-card__image {
+        width: 100%;
+        height: auto;
+    }
+
+    .product-card__info,
+    .product-card__footer {
+        width: 100%;
+    }
+
+    .product-card__title {
+        width: 100%;
+    }
+}
+
+@media (max-width: 900px) {
+    .product-card {
+        width: 240px;
+    }
+}

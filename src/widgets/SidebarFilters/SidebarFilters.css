@@ -125,3 +125,9 @@
 .sidebar-filters__chevron--open::after {
     transform: rotate(45deg);
 }
+
+@media (max-width: 900px) {
+    .sidebar-filters {
+        width: 100%;
+    }
+}

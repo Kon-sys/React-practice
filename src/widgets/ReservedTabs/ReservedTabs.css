@@ -42,3 +42,11 @@
 .reserved-tabs__item--active .reserved-tabs__line {
     border-bottom-color: #ff2d55;
 }
+
+@media (max-width: 560px) {
+    .reserved-tabs {
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding: 0 4px;
+    }
+}
