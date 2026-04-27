@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import CatalogBreadcrumbs from "../CatalogBreadcrumbs/CatalogBreadcrumbs";
 import "./CatalogToolbar.css";
 
-import { resetFilter, setFilter, setCategoryPath } from "../../features/filters/filtersSlice";
+import { resetFilter, setFilter, setCategoryPath } from "../../features/filters/model/filtersSlice.js";
 
 const colorOptions = [
     { value: "", label: "Color" },

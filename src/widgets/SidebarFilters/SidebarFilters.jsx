@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setFilter, setCategoryPath } from "../../features/filters/filtersSlice";
+import { setFilter, setCategoryPath } from "../../features/filters/model/filtersSlice.js";
 import "./SidebarFilters.css";
 
 

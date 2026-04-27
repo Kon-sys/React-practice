@@ -1,0 +1,41 @@
+.reserved-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 31px;
+    height: 31px;
+
+    padding: 0;
+    border: none;
+    border-radius: 16px;
+    background-color: #ffffff;
+
+    cursor: pointer;
+}
+
+.reserved-button img {
+    display: block;
+
+    width: 31px;
+    height: 31px;
+
+    object-fit: contain;
+}
+
+.reserved-button--active {
+    width: auto;
+    min-width: 67px;
+    height: 31px;
+
+    padding: 8px;
+
+    border-radius: 16px;
+    background-color: #ffe08a;
+
+    color: #b55d00;
+    font-family: "SF UI Display", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 100%;
+}

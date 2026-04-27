@@ -1,9 +1,9 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import ProductCard from "../../../entities/product/ProductCard.jsx";
-import { addReserved, removeReserved } from "../../../features/reserved/reservedSlice.js";
-import { toggleFavorite } from "../../../features/favorites/favoritesSlice.js";
+import ProductCard from "../../../entities/product/ui/ProductCard.jsx";
+import { addReserved, removeReserved } from "../../../entities/reserved/model/reservedSlice.js";
+import { toggleFavorite } from "../../../entities/favorite/model/favoritesSlice.js";
 
 function ProductCardContainer({ product }) {
     const dispatch = useDispatch();

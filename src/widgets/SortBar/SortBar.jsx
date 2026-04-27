@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setFilter } from "../../features/filters/filtersSlice";
+import { setFilter } from "../../features/filters/model/filtersSlice.js";
 import "./SortBar.css";
 
 function SortBar() {

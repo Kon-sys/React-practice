@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { removeReserved } from "../features/reserved/reservedSlice";
+import { removeReserved } from "../entities/reserved/model/reservedSlice.js";
 
 import Header from "../widgets/Header/Header";
 import CategoryTabs from "../widgets/CategoryTabs/CategoryTabs";

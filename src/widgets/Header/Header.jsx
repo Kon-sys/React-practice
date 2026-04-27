@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { setFilter } from "../../features/filters/filtersSlice";
+import { setFilter } from "../../features/filters/model/filtersSlice.js";
 
 import logo from "../../assets/logo.svg";
 import search_icon from "../../assets/Search.svg";

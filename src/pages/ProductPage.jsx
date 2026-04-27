@@ -3,8 +3,8 @@ import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import Header from "../widgets/Header/Header";
 import { useGetProductByIdQuery } from "../services/api";
-import { addReserved, removeReserved } from "../features/reserved/reservedSlice";
-import { toggleFavorite } from "../features/favorites/favoritesSlice";
+import { addReserved, removeReserved } from "../entities/reserved/model/reservedSlice.js";
+import { toggleFavorite } from "../entities/favorite/model/favoritesSlice.js";
 
 import "./styles/ProductPage.css";
 

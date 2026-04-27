@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 import { useLoginMutation, useRegisterUserMutation } from "../../services/api";
-import { setCredentials } from "../../features/auth/authSlice";
+import { setCredentials } from "../../features/auth/model/authSlice.js";
 
 import "./AuthForm.css";
 import ProductPage from "../../pages/ProductPage";

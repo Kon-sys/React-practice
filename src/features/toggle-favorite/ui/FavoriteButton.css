@@ -1,0 +1,27 @@
+.favorite-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 20px;
+    height: 20px;
+
+    padding: 0;
+    border: none;
+    background: transparent;
+
+    cursor: pointer;
+}
+
+.favorite-button img {
+    display: block;
+
+    width: 20px;
+    height: 20px;
+
+    object-fit: contain;
+}
+
+.favorite-button--active {
+    opacity: 1;
+}

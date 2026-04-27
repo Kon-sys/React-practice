@@ -3,9 +3,9 @@ import { useSelector, useDispatch } from "react-redux";
 import Header from "../widgets/Header/Header";
 import AuthForm from "../widgets/AuthForm/AuthForm";
 import { useNavigate } from "react-router-dom";
-import { logout } from "../features/auth/authSlice";
-import { clearReserved } from "../features/reserved/reservedSlice";
-import { clearFavorites } from "../features/favorites/favoritesSlice";
+import { logout } from "../features/auth/model/authSlice.js";
+import { clearReserved } from "../entities/reserved/model/reservedSlice.js";
+import { clearFavorites } from "../entities/favorite/model/favoritesSlice.js";
 import "./styles/AuthPage.css";
 
 function AuthPage() {

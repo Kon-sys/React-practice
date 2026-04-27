@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { resetFilters, setFilter, setCategoryPath } from "../../features/filters/filtersSlice";
+import { resetFilters, setFilter, setCategoryPath } from "../../features/filters/model/filtersSlice.js";
 import "./CatalogBreadcrumbs.css";
 
 function CatalogBreadcrumbs() {
