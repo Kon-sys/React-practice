@@ -1,11 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-
 import { addReserved, removeReserved } from "../../features/reserved/reservedSlice";
-
 import { toggleFavorite } from "../../features/favorites/favoritesSlice";
-
 import favoriteIcon from "../../assets/favorite.svg";
 import favoriteActiveIcon from "../../assets/mdi_heart.svg";
 import cartIcon from "../../assets/cart.svg";
@@ -18,11 +15,19 @@ function ProductCard({ product }) {
     const reservedItems = useSelector((state) => state.reserved.items);
     const favoriteItems = useSelector((state) => state.favorites.items);
 
+    const navigate = useNavigate();
+    const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
+
     const isReserved = reservedItems.some((item) => item.id === product.id);
     const isFavorite = favoriteItems.some((item) => item.id === product.id);
 
     function handleReservedClick(event) {
         event.preventDefault();
+
+        if (!isAuthenticated) {
+            navigate("/login");
+            return;
+        }
 
         if (isReserved) {
             dispatch(removeReserved(product.id));
@@ -34,6 +39,12 @@ function ProductCard({ product }) {
 
     function handleFavoriteClick(event) {
         event.preventDefault();
+
+        if (!isAuthenticated) {
+            navigate("/login");
+            return;
+        }
+
         dispatch(toggleFavorite(product));
     }
 
