@@ -1,7 +1,7 @@
-const React = require("react");
-const { useDispatch, useSelector } = require("react-redux");
-const { setFilter, setCategoryPath } = require("../../features/filters/filtersSlice").actions;
-require("./CategoryTabs.css");
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { setFilter, setCategoryPath } from "../../features/filters/filtersSlice";
+import "./CategoryTabs.css";
 
 const tabs = ["Women", "Men", "Unisex", "Children", "New"];
 
@@ -40,5 +40,4 @@ function CategoryTabs() {
     );
 }
 
-module.exports = CategoryTabs;
-module.exports.default = CategoryTabs;
+export default CategoryTabs;

@@ -1,11 +1,11 @@
-const React = require("react");
-const { useState } = React;
-const { useSelector } = require("react-redux");
+import React from "react";
+import { useState } from "react";
+import { useSelector } from "react-redux";
 
-const Header = require("../widgets/Header/Header");
-const CategoryTabs = require("../widgets/CategoryTabs/CategoryTabs");
-const ReservedTabs = require("../widgets/ReservedTabs/ReservedTabs");
-const ReservedShopGroup = require("../widgets/ReservedShopGroup/ReservedShopGroup");
+import Header from "../widgets/Header/Header";
+import CategoryTabs from "../widgets/CategoryTabs/CategoryTabs";
+import ReservedTabs from "../widgets/ReservedTabs/ReservedTabs";
+import ReservedShopGroup from "../widgets/ReservedShopGroup/ReservedShopGroup";
 
 require("./styles/ReservedPage.css");
 
@@ -45,5 +45,4 @@ function ReservedPage() {
     );
 }
 
-module.exports = ReservedPage;
-module.exports.default = ReservedPage;
+export default ReservedPage;

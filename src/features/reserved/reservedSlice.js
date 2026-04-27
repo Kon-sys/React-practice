@@ -1,4 +1,4 @@
-const { createSlice } = require("@reduxjs/toolkit");
+import { createSlice } from "@reduxjs/toolkit";
 
 const reservedSlice = createSlice({
     name: "reserved",
@@ -22,5 +22,5 @@ const reservedSlice = createSlice({
     },
 });
 
-module.exports = reservedSlice.reducer;
-module.exports.actions = reservedSlice.actions;
+export default reservedSlice.reducer;
+export const { addReserved, removeReserved, clearReserved } = reservedSlice.actions;

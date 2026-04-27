@@ -1,9 +1,9 @@
-const React = require("react");
-const { Routes, Route, Navigate } = require("react-router-dom");
+import React from "react";
+import { Routes, Route, Navigate } from "react-router-dom";
 
-const AuthPage = require("../pages/AuthPage");
-const CatalogPage = require("../pages/CatalogPage");
-const ReservedPage = require("../pages/ReservedPage");
+import AuthPage from"../pages/AuthPage";
+import CatalogPage from "../pages/CatalogPage";
+import ReservedPage from "../pages/ReservedPage";
 
 function AppRouter() {
     return (
@@ -16,4 +16,4 @@ function AppRouter() {
     );
 }
 
-module.exports = { AppRouter };
+export { AppRouter };

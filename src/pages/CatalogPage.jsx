@@ -1,13 +1,13 @@
-const React = require("react");
-const { useSelector } = require("react-redux");
+import React from "react";
+import { useSelector } from "react-redux";
 
-const { useGetProductsQuery } = require("../services/api");
-const ProductGrid = require("../widgets/ProductGrid/ProductGrid");
-const Header = require("../widgets/Header/Header");
-const CategoryTabs = require("../widgets/CategoryTabs/CategoryTabs");
-const SidebarFilters = require("../widgets/SidebarFilters/SidebarFilters");
-const SortBar = require("../widgets/SortBar/SortBar");
-const CatalogToolbar = require("../widgets/CatalogToolbar/CatalogToolbar");
+import { useGetProductsQuery } from "../services/api";
+import ProductGrid from "../widgets/ProductGrid/ProductGrid";
+import Header from "../widgets/Header/Header";
+import CategoryTabs from "../widgets/CategoryTabs/CategoryTabs";
+import SidebarFilters from "../widgets/SidebarFilters/SidebarFilters";
+import SortBar from "../widgets/SortBar/SortBar";
+import CatalogToolbar from "../widgets/CatalogToolbar/CatalogToolbar";
 
 require("./styles/CatalogPage.css");
 
@@ -114,5 +114,4 @@ function CatalogPage() {
     );
 }
 
-module.exports = CatalogPage;
-module.exports.default = CatalogPage;
+export default CatalogPage;

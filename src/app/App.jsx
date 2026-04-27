@@ -1,10 +1,9 @@
-const React = require("react");
-const { AppRouter } = require("./router");
-require("./index.css");
+import React from "react";
+import "./index.css";
+import { AppRouter } from "./router";
 
 function App() {
     return <AppRouter />;
 }
 
-module.exports = App;
-module.exports.default = App;
+export default App;

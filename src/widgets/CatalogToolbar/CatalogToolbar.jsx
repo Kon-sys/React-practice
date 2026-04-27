@@ -1,10 +1,9 @@
-const React = require("react");
-const { useDispatch, useSelector } = require("react-redux");
-const CatalogBreadcrumbs = require("../CatalogBreadcrumbs/CatalogBreadcrumbs").default;
-require("./CatalogToolbar.css");
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import CatalogBreadcrumbs from "../CatalogBreadcrumbs/CatalogBreadcrumbs";
+import "./CatalogToolbar.css";
 
-const { setFilter, resetFilter, setCategoryPath } =
-    require("../../features/filters/filtersSlice").actions;
+import { resetFilter, setFilter, setCategoryPath } from "../../features/filters/filtersSlice";
 
 const colorOptions = [
     { value: "", label: "Color" },
@@ -248,5 +247,4 @@ function CatalogToolbar({ products }) {
     );
 }
 
-module.exports = CatalogToolbar;
-module.exports.default = CatalogToolbar;
+export default CatalogToolbar;

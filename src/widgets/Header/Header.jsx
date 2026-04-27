@@ -1,15 +1,15 @@
-const React = require("react");
-const { Link } = require("react-router-dom");
-const { useDispatch, useSelector } = require("react-redux");
-const { setFilter } = require("../../features/filters/filtersSlice").actions;
+import React from "react";
+import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { setFilter } from "../../features/filters/filtersSlice";
 
-const logo = require("../../assets/logo.svg");
-const search_icon = require("../../assets/Search.svg");
-const favorites_icon = require("../../assets/mdi_heart.svg");
-const reserved_icon = require("../../assets/solar_cart-bold.svg");
-const hero_profile = require("../../assets/heroicons-solid_user.svg");
+import logo from "../../assets/logo.svg";
+import search_icon from "../../assets/Search.svg";
+import favorites_icon from "../../assets/mdi_heart.svg";
+import reserved_icon from "../../assets/solar_cart-bold.svg";
+import hero_profile from "../../assets/heroicons-solid_user.svg";
 
-require("./Header.css");
+import "./Header.css";
 
 function Header() {
 
@@ -93,5 +93,4 @@ function Header() {
     );
 }
 
-module.exports = Header;
-module.exports.default = Header;
+export default Header;

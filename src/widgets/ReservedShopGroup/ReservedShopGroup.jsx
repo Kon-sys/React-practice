@@ -1,5 +1,5 @@
-const React = require("react");
-require("./ReservedShopGroup.css");
+import React from "react";
+import "./ReservedShopGroup.css";
 
 function ReservedShopGroup({ shopName, location, workHours, reservedTime, products }) {
     return (
@@ -72,5 +72,4 @@ function ReservedShopGroup({ shopName, location, workHours, reservedTime, produc
     );
 }
 
-module.exports = ReservedShopGroup;
-module.exports.default = ReservedShopGroup;
+export default ReservedShopGroup;

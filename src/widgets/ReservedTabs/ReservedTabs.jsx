@@ -1,5 +1,5 @@
-const React = require("react");
-require("./ReservedTabs.css");
+import React from "react";
+import "./ReservedTabs.css";
 
 function ReservedTabs({ activeTab, onTabChange }) {
     return (
@@ -33,5 +33,4 @@ function ReservedTabs({ activeTab, onTabChange }) {
     );
 }
 
-module.exports = ReservedTabs;
-module.exports.default = ReservedTabs;
+export default ReservedTabs;

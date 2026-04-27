@@ -1,6 +1,6 @@
-const React = require("react");
-const ProductCard = require("../ProductCard/ProductCard").default;
-require("./ProductGrid.css");
+import React from "react";
+import ProductCard from "../ProductCard/ProductCard";
+import "./ProductGrid.css";
 
 function ProductGrid({ products }) {
     return (
@@ -12,5 +12,4 @@ function ProductGrid({ products }) {
     );
 }
 
-module.exports = ProductGrid;
-module.exports.default = ProductGrid;
+export default ProductGrid;

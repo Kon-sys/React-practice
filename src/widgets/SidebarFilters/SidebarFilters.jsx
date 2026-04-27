@@ -1,8 +1,8 @@
-const React = require("react");
-const { useState } = React;
-const { useDispatch, useSelector } = require("react-redux");
-const { setFilter, setCategoryPath } = require("../../features/filters/filtersSlice").actions;
-require("./SidebarFilters.css");
+import React from "react";
+import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { setFilter, setCategoryPath } from "../../features/filters/filtersSlice";
+import "./SidebarFilters.css";
 
 
 const categories = [
@@ -238,5 +238,4 @@ function SidebarFilters() {
     );
 }
 
-module.exports = SidebarFilters;
-module.exports.default = SidebarFilters;
+export default SidebarFilters;

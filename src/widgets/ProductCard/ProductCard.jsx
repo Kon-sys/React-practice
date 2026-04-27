@@ -1,18 +1,16 @@
-const React = require("react");
-const { Link } = require("react-router-dom");
-const { useDispatch, useSelector } = require("react-redux");
+import React from "react";
+import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
 
-const { addReserved, removeReserved } =
-    require("../../features/reserved/reservedSlice").actions;
+import { addReserved, removeReserved } from "../../features/reserved/reservedSlice";
 
-const { toggleFavorite } =
-    require("../../features/favorites/favoritesSlice").actions;
+import { toggleFavorite } from "../../features/favorites/favoritesSlice";
 
-const favoriteIcon = require("../../assets/favorite.svg");
-const favoriteActiveIcon = require("../../assets/mdi_heart.svg");
-const cartIcon = require("../../assets/cart.svg");
+import favoriteIcon from "../../assets/favorite.svg";
+import favoriteActiveIcon from "../../assets/mdi_heart.svg";
+import cartIcon from "../../assets/cart.svg";
 
-require("./ProductCard.css");
+import "./ProductCard.css";
 
 function ProductCard({ product }) {
     const dispatch = useDispatch();
@@ -97,5 +95,4 @@ function ProductCard({ product }) {
     );
 }
 
-module.exports = ProductCard;
-module.exports.default = ProductCard;
+export default ProductCard;

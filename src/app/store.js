@@ -1,9 +1,9 @@
-const { configureStore } = require("@reduxjs/toolkit");
-const { api } = require("../services/api");
+import { configureStore } from "@reduxjs/toolkit";
+import { api } from "../services/api";
 
-const reservedReducer = require("../features/reserved/reservedSlice");
-const favoritesReducer = require("../features/favorites/favoritesSlice");
-const filtersReducer = require("../features/filters/filtersSlice");
+import reservedReducer from "../features/reserved/reservedSlice";
+import favoritesReducer from "../features/favorites/favoritesSlice";
+import filtersReducer from "../features/filters/filtersSlice";
 
 const store = configureStore({
     reducer: {
@@ -16,4 +16,4 @@ const store = configureStore({
         getDefaultMiddleware().concat(api.middleware),
 });
 
-module.exports = { store };
+export { store };

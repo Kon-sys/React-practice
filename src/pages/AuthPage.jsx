@@ -1,9 +1,7 @@
-const React = require("react");
-const { useSelector } = require("react-redux");
-
-const Header = require("../widgets/Header/Header").default;
-
-require("./styles/AuthPage.css");
+import React from "react";
+import { useSelector } from "react-redux";
+import Header from "../widgets/Header/Header";
+import "./styles/AuthPage.css";
 
 function AuthPage() {
 
@@ -45,5 +43,4 @@ function AuthPage() {
     );
 }
 
-module.exports = AuthPage;
-module.exports.default = AuthPage;
+export default AuthPage;

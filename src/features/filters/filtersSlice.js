@@ -1,4 +1,4 @@
-const { createSlice } = require("@reduxjs/toolkit");
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
     sort: "asc",
@@ -41,5 +41,5 @@ const filtersSlice = createSlice({
     },
 });
 
-module.exports = filtersSlice.reducer;
-module.exports.actions = filtersSlice.actions;
+export const { resetFilter, resetFilters, setFilter, setCategoryPath } = filtersSlice.actions;
+export default filtersSlice.reducer;

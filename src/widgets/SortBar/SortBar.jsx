@@ -1,7 +1,7 @@
-const React = require("react");
-const { useDispatch, useSelector } = require("react-redux");
-const { setFilter } = require("../../features/filters/filtersSlice").actions;
-require("./SortBar.css");
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { setFilter } from "../../features/filters/filtersSlice";
+import "./SortBar.css";
 
 function SortBar() {
     const dispatch = useDispatch();
@@ -42,5 +42,4 @@ function SortBar() {
     );
 }
 
-module.exports = SortBar;
-module.exports.default = SortBar;
+export default SortBar;

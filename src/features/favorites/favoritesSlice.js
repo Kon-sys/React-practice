@@ -1,4 +1,4 @@
-const { createSlice } = require("@reduxjs/toolkit");
+import { createSlice } from "@reduxjs/toolkit";
 
 const favoritesSlice = createSlice({
     name: "favorites",
@@ -18,5 +18,4 @@ const favoritesSlice = createSlice({
     },
 });
 
-module.exports = favoritesSlice.reducer;
-module.exports.actions = favoritesSlice.actions;
+export default favoritesSlice.reducer;

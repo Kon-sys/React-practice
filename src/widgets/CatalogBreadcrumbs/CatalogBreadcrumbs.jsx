@@ -1,8 +1,7 @@
-const React = require("react");
-const { useDispatch, useSelector } = require("react-redux");
-const { resetFilters, setFilter, setCategoryPath } =
-    require("../../features/filters/filtersSlice").actions;
-require("./CatalogBreadcrumbs.css");
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { resetFilters, setFilter, setCategoryPath } from "../../features/filters/filtersSlice";
+import "./CatalogBreadcrumbs.css";
 
 function CatalogBreadcrumbs() {
     const dispatch = useDispatch();
@@ -54,5 +53,4 @@ function CatalogBreadcrumbs() {
     );
 }
 
-module.exports = CatalogBreadcrumbs;
-module.exports.default = CatalogBreadcrumbs;
+export default CatalogBreadcrumbs;
