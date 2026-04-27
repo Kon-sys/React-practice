@@ -23,6 +23,18 @@ function Header() {
         dispatch(setFilter({ name: "search", value: event.target.value }));
     }
 
+    const headerLinks = [
+        { title: "About us", to: "/products"},
+        { title: "All shops", to: "/products"},
+        { title: "Become a merchant", to: "/products"}
+    ];
+
+    const headerIcons = [
+        { to: "/favorites", label: "Favorites", icon: favorites_icon, getCount: () => favoritesCount },
+        { to: "/reserved", label: "Reserved", icon: reserved_icon, getCount: () => reservedCount },
+        { to: "/login", label: "Profile", icon: hero_profile, getCount: null }
+    ];
+
     return (
         <header className="header">
             <div className="header__container">
@@ -54,39 +66,22 @@ function Header() {
                 </div>
 
                 <div className="header__links">
-                    <Link to="/products" className="header__link">
-                        <div className="header__link-text">
-                            About us
-                        </div>
-                    </Link>
-
-                    <Link to="/products" className="header__link">
-                        <div className="header__link-text">
-                            All shops
-                        </div>
-                    </Link>
-
-                    <Link to="/products" className="header__link">
-                        <div className="header__link-text">
-                            Become a merchant
-                        </div>
-                    </Link>
+                    {headerLinks.map(({ title, to }) => (
+                        <Link key={title} to={to} className="header__link">
+                            <div className="header__link-text">
+                                {title}
+                            </div>
+                        </Link>
+                    ))}
                 </div>
 
                 <div className="header__icons">
-                    <Link to="/favorites" className="header__icon-link" aria-label="Favorites">
-                        <img src={favorites_icon} alt="Favorites" className="header__icon-image" />
-                        <span className="header__icon-count">{favoritesCount}</span>
-                    </Link>
-
-                    <Link to="/reserved" className="header__icon-link" aria-label="Reserved">
-                        <img src={reserved_icon} alt="Reserved" className="header__icon-image" />
-                        <span className="header__icon-count">{reservedCount}</span>
-                    </Link>
-
-                    <Link to="/login" className="header__icon-link" aria-label="Profile">
-                        <img src={hero_profile} alt="Profile" className="header__icon-image" />
-                    </Link>
+                    {headerIcons.map(({ to, label, icon, getCount }) => (
+                        <Link key={to} to={to} className="header__icon-link" aria-label={label}>
+                            <img src={icon} alt={label} className="header__icon-image" />
+                            {getCount && <span className="header__icon-count">{getCount()}</span>}
+                        </Link>
+                    ))}
                 </div>
             </div>
         </header>
