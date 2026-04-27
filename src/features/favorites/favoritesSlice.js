@@ -6,7 +6,7 @@ const favoritesSlice = createSlice({
         items: [],
     },
     reducers: {
-        toggleFavorite(state, action) {
+        toggleFavorite: (state, action) => {
             const exists = state.items.find((item) => item.id === action.payload.id);
 
             if (exists) {
@@ -19,3 +19,4 @@ const favoritesSlice = createSlice({
 });
 
 export default favoritesSlice.reducer;
+export const { toggleFavorite } = favoritesSlice.actions;

@@ -21,21 +21,19 @@ const filtersSlice = createSlice({
     name: "filters",
     initialState,
     reducers: {
-        setFilter(state, action) {
+        setFilter: (state, action) => {
             const { name, value } = action.payload;
             state[name] = value;
         },
 
-        resetFilter(state, action) {
-            const name = action.payload;
+        resetFilter: (state, action) => {
+            const { payload: name } = action;
             state[name] = initialState[name];
         },
 
-        resetFilters() {
-            return initialState;
-        },
+        resetFilters: () => initialState,
 
-        setCategoryPath(state, action) {
+        setCategoryPath: (state, action) => {
             state.categoryPath = action.payload;
         }
     },

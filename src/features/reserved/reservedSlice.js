@@ -6,17 +6,17 @@ const reservedSlice = createSlice({
         items: [],
     },
     reducers: {
-        addReserved(state, action) {
+        addReserved: (state, action) => {
             const exists = state.items.find((item) => item.id === action.payload.id);
 
             if (!exists) {
                 state.items.push(action.payload);
             }
         },
-        removeReserved(state, action) {
+        removeReserved: (state, action) => {
             state.items = state.items.filter((item) => item.id !== action.payload);
         },
-        clearReserved(state) {
+        clearReserved: (state) => {
             state.items = [];
         },
     },
