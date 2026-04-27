@@ -1,7 +1,11 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import Header from "../widgets/Header/Header";
 import AuthForm from "../widgets/AuthForm/AuthForm";
+import { useNavigate } from "react-router-dom";
+import { logout } from "../features/auth/authSlice";
+import { clearReserved } from "../features/reserved/reservedSlice";
+import { clearFavorites } from "../features/favorites/favoritesSlice";
 import "./styles/AuthPage.css";
 
 function AuthPage() {
@@ -9,6 +13,16 @@ function AuthPage() {
     const user = useSelector((state) => state.auth.user);
     const reservedCount = useSelector((state) => state.reserved.items.length);
     const favoritesCount = useSelector((state) => state.favorites.items.length);
+
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+
+    function handleLogout() {
+        dispatch(logout());
+        dispatch(clearReserved());
+        dispatch(clearFavorites());
+        navigate("/login");
+    }
 
     return (
         <>
@@ -43,6 +57,14 @@ function AuthPage() {
                                 </div>
                             </div>
                         </div>
+
+                        <button
+                            className="profile-card__logout"
+                            type="button"
+                            onClick={handleLogout}
+                        >
+                            Logout
+                        </button>
                     </section>
                 ) : (
                     <AuthForm />

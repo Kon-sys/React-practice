@@ -84,3 +84,23 @@
     color: #333333;
     font-size: 20px;
 }
+.profile-card__logout {
+    height: 44px;
+    margin-top: 24px;
+    padding: 0 24px;
+
+    border: none;
+    border-radius: 22px;
+    background-color: #f4717a;
+
+    color: #ffffff;
+    font-family: "SF UI Display", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.profile-card__logout:hover {
+    opacity: 0.9;
+}
