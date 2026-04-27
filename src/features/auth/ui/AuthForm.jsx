@@ -1,13 +1,11 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
-import { useLoginMutation, useRegisterUserMutation } from "../../services/api";
-import { setCredentials } from "../../features/auth/model/authSlice.js";
+import { useLoginMutation, useRegisterUserMutation } from "../../../services/api.js";
+import { setCredentials } from "../model/authSlice.js";
 
 import "./AuthForm.css";
-import ProductPage from "../../pages/ProductPage";
 
 function AuthForm() {
     const dispatch = useDispatch();
