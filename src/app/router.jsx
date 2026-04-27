@@ -12,7 +12,6 @@ function AppRouter() {
         <Routes>
             <Route path="/" element={<Navigate to="/products" replace />} />
             <Route path="/login" element={<AuthPage />} />
-            <Route path="/products" element={<CatalogPage />} />
             <Route
                 path="/products/:id"
                 element={
@@ -21,7 +20,7 @@ function AppRouter() {
                     </PrivateRoute>
                 }
             />
-
+            <Route path="/products" element={<CatalogPage />} />
             <Route
                 path="/reserved"
                 element={

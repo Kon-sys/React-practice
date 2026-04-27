@@ -1,17 +1,20 @@
-import path from "path";
-import HtmlWebpackPlugin from "html-webpack-plugin";
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
     mode: "development",
     entry: "./src/index.js",
+
     output: {
         path: path.resolve(__dirname, "dist"),
         filename: "bundle.js",
-        clean: true
+        clean: true,
     },
+
     resolve: {
-        extensions: [".js", ".jsx"]
+        extensions: [".js", ".jsx"],
     },
+
     module: {
         rules: [
             {
@@ -23,32 +26,34 @@ module.exports = {
                         sourceType: "unambiguous",
                         presets: [
                             ["@babel/preset-env"],
-                            ["@babel/preset-react", { runtime: "classic" }]
+                            ["@babel/preset-react", { runtime: "classic" }],
                         ],
-                        plugins: ["@babel/plugin-transform-modules-commonjs"]
-                    }
-                }
+                        plugins: ["@babel/plugin-transform-modules-commonjs"],
+                    },
+                },
             },
             {
                 test: /\.css$/i,
-                use: ["style-loader", "css-loader"]
+                use: ["style-loader", "css-loader"],
             },
             {
                 test: /\.(png|jpe?g|gif|svg|webp)$/i,
                 type: "asset/resource",
-            }
-        ]
+            },
+        ],
     },
+
     plugins: [
         new HtmlWebpackPlugin({
-            template: "./public/index.html"
-        })
+            template: "./public/index.html",
+        }),
     ],
+
     devServer: {
         static: path.resolve(__dirname, "dist"),
         port: 3000,
         open: true,
         hot: true,
-        historyApiFallback: true
-    }
+        historyApiFallback: true,
+    },
 };
