@@ -35,7 +35,7 @@ const api = createApi({
 
 const { useGetProductsQuery, useGetProductByIdQuery, useLoginMutation, useRegisterUserMutation } = api;
 
-module.exports = {
+export {
     api,
     useGetProductsQuery,
     useGetProductByIdQuery,

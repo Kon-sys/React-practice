@@ -7,6 +7,7 @@ import { useLoginMutation, useRegisterUserMutation } from "../../services/api";
 import { setCredentials } from "../../features/auth/authSlice";
 
 import "./AuthForm.css";
+import ProductPage from "../../pages/ProductPage";
 
 function AuthForm() {
     const dispatch = useDispatch();
@@ -176,5 +177,4 @@ function AuthForm() {
     );
 }
 
-module.exports = AuthForm;
-module.exports.default = AuthForm;
+export default AuthForm;

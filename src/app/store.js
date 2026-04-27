@@ -1,10 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { api } from "../services/api";
+import { api } from "../services/api.js";
 
-import authReducer from "../features/auth/authSlice";
-import reservedReducer from "../features/reserved/reservedSlice";
-import favoritesReducer from "../features/favorites/favoritesSlice";
-import filtersReducer from "../features/filters/filtersSlice";
+import authReducer from "../features/auth/authSlice.js";
+import reservedReducer from "../features/reserved/reservedSlice.js";
+import favoritesReducer from "../features/favorites/favoritesSlice.js";
+import filtersReducer from "../features/filters/filtersSlice.js";
 
 const store = configureStore({
     reducer: {

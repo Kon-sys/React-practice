@@ -87,5 +87,4 @@ function ProductPage() {
     );
 }
 
-module.exports = ProductPage;
-module.exports.default = ProductPage;
+export default ProductPage;

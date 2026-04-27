@@ -1,7 +1,11 @@
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+import path from "path";
+import HtmlWebpackPlugin from "html-webpack-plugin";
+import { fileURLToPath } from "url";
 
-module.exports = {
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+export default {
     mode: "development",
     entry: "./src/index.js",
 
@@ -13,6 +17,7 @@ module.exports = {
 
     resolve: {
         extensions: [".js", ".jsx"],
+        fullySpecified: false,
     },
 
     module: {
@@ -28,7 +33,6 @@ module.exports = {
                             ["@babel/preset-env"],
                             ["@babel/preset-react", { runtime: "classic" }],
                         ],
-                        plugins: ["@babel/plugin-transform-modules-commonjs"],
                     },
                 },
             },

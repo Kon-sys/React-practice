@@ -9,7 +9,7 @@ import SidebarFilters from "../widgets/SidebarFilters/SidebarFilters";
 import SortBar from "../widgets/SortBar/SortBar";
 import CatalogToolbar from "../widgets/CatalogToolbar/CatalogToolbar";
 
-require("./styles/CatalogPage.css");
+import "./styles/CatalogPage.css";
 
 function CatalogPage() {
     const { data, isLoading, error } = useGetProductsQuery();
