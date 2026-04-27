@@ -1,8 +1,8 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { addReserved, removeReserved } from "../../features/reserved/reservedSlice";
-import { toggleFavorite } from "../../features/favorites/favoritesSlice";
+import { addReserved, removeReserved } from "../../features/reserved/reservedSlice.js";
+import { toggleFavorite } from "../../features/favorites/favoritesSlice.js";
 import favoriteIcon from "../../assets/favorite.svg";
 import favoriteActiveIcon from "../../assets/mdi_heart.svg";
 import cartIcon from "../../assets/cart.svg";

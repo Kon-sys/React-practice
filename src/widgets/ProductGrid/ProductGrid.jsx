@@ -1,12 +1,13 @@
 import React from "react";
-import ProductCard from "../ProductCard/ProductCard";
+
+import ProductCardContainer from "./ui/ProductCardContainer.jsx";
 import "./ProductGrid.css";
 
 function ProductGrid({ products }) {
     return (
         <section className="product-grid">
             {products.map((product) => (
-                <ProductCard key={product.id} product={product} />
+                <ProductCardContainer key={product.id} product={product} />
             ))}
         </section>
     );
