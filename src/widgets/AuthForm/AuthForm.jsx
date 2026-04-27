@@ -51,7 +51,7 @@ function AuthForm() {
                     })
                 );
 
-                navigate("/login");
+                navigate("/products");
                 return;
             }
 
@@ -73,7 +73,7 @@ function AuthForm() {
                 })
             );
 
-            navigate("/login");
+            navigate("/products");
         } catch (error) {
             setErrorText("Invalid data. Check username and password.");
         }
