@@ -12,6 +12,7 @@ function AppRouter() {
             <Route path="/login" element={<AuthPage />} />
             <Route path="/products" element={<CatalogPage />} />
             <Route path="/reserved" element={<ReservedPage />} />
+            <Route path="/login" element={<AuthPage />} />
         </Routes>
     );
 }

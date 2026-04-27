@@ -1,3 +1,12 @@
+.auth-page {
+    min-height: calc(100vh - 160px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 48px 20px;
+}
+
 .profile-page {
     min-height: calc(100vh - 160px);
     padding: 48px 20px;
