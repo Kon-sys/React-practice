@@ -5,6 +5,7 @@ import SidebarFilters from "../SidebarFilters/SidebarFilters.jsx";
 import CatalogToolbar from "../CatalogToolbar/CatalogToolbar.jsx";
 import SortBar from "../SortBar/SortBar.jsx";
 import ProductGrid from "../ProductGrid/ProductGrid.jsx";
+import PageState from "../../shared/ui/PageState/PageState.jsx";
 
 import { useGetProductsQuery } from "../../services/api.js";
 
@@ -72,18 +73,15 @@ function CatalogBoard() {
     });
 
     if (isLoading) {
-        return (
-            <div className="catalog-board">
-                <p className="catalog-board__state">Loading products...</p>
-            </div>
-        );
+        return <PageState title="Loading products..." />;
     }
 
     if (error) {
         return (
-            <div className="catalog-board">
-                <p className="catalog-board__state">Something went wrong.</p>
-            </div>
+            <PageState
+                title="Something went wrong"
+                text="Please try again later."
+            />
         );
     }
 

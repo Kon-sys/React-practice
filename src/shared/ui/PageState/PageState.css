@@ -1,0 +1,28 @@
+.page-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 240px;
+    padding: 48px 20px;
+
+    text-align: center;
+}
+
+.page-state__title {
+    margin: 0;
+
+    color: #333333;
+    font-family: "SF UI Display", Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.page-state__text {
+    margin: 8px 0 0;
+
+    color: rgba(51, 51, 51, 0.55);
+    font-family: "SF UI Display", Arial, sans-serif;
+    font-size: 14px;
+}

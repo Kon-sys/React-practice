@@ -7,6 +7,7 @@ import ReservedShopGroup from "../ReservedShopGroup/ReservedShopGroup.jsx";
 import { removeReserved } from "../../entities/reserved/model/reservedSlice.js";
 
 import "./ReservedBoard.css";
+import PageState from "../../shared/ui/PageState/PageState.jsx";
 
 function ReservedBoard() {
     const dispatch = useDispatch();
@@ -34,10 +35,16 @@ function ReservedBoard() {
                             onRemove={handleRemoveReserved}
                         />
                     ) : (
-                        <p className="reserved-board__placeholder">No reserved products yet</p>
+                        <PageState
+                            title="No reserved products yet"
+                            text="Items you reserve will appear here."
+                        />
                     )
                 ) : (
-                    <p className="reserved-board__placeholder">Purchased products will be here</p>
+                    <PageState
+                        title="Purchased products will be here"
+                        text="Your completed purchases will appear in this section."
+                    />
                 )}
             </div>
         </>

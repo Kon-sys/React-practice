@@ -7,6 +7,7 @@ import { addReserved, removeReserved } from "../entities/reserved/model/reserved
 import { toggleFavorite } from "../entities/favorite/model/favoritesSlice.js";
 
 import "./styles/ProductPage.css";
+import PageState from "../shared/ui/PageState/PageState.jsx";
 
 function ProductPage() {
     const { id } = useParams();
@@ -18,7 +19,7 @@ function ProductPage() {
     const favoriteItems = useSelector((state) => state.favorites.items);
 
     if (isLoading) {
-        return <p>Loading...</p>;
+        return <PageState title="Loading product..." />;
     }
 
     const isReserved = reservedItems.some((item) => item.id === product.id);
