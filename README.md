@@ -1,19 +1,21 @@
 # 2nd Hand Market
 
-SPA-приложение на React для просмотра товаров, фильтрации, добавления в избранное и резерв.
+A React SPA for browsing products, filtering items, adding products to favorites, and reserving products.
 
-## Функциональность
+## Functionality
 
-- просмотр каталога товаров;
-- поиск товаров;
-- фильтрация по категориям и параметрам;
-- сортировка по цене;
-- добавление товаров в Favorites;
-- добавление товаров в Reserved;
-- просмотр Reserved-товаров;
-- страница профиля со статистикой.
+- product catalog browsing;
+- product search;
+- filtering by categories and parameters;
+- sorting by price;
+- adding products to Favorites;
+- adding products to Reserved;
+- viewing Reserved products;
+- product details page;
+- profile page with user statistics;
+- login and registration flow.
 
-## Зависимости
+## Dependencies
 
 - React
 - React DOM
@@ -30,7 +32,7 @@ SPA-приложение на React для просмотра товаров, ф
 - HTML Webpack Plugin
 - DummyJSON API
 
-## Установка зависимостей
+## Installing dependencies
 
 ```bash
 npm install react react-dom react-router-dom @reduxjs/toolkit react-redux
@@ -39,20 +41,21 @@ npm install -D babel-loader @babel/core @babel/preset-env @babel/preset-react @b
 npm install -D css-loader style-loader
 ```
 
-## Запуск проекта
-
+### Running the project
 ```bash
 npm start
 ```
 
-## Сборка проекта
+### Building the project
 ```bash
 npm run build
 ```
 
-## Готовая сборка появится в папке:
+### The production build will be created in the folder:
+```bash
 dist
-API
+```
 
-Данные товаров загружаются из DummyJSON API:
+## API
+### Product and user data are loaded from DummyJSON API:
 https://dummyjson.com
