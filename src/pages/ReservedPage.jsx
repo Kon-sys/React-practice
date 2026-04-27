@@ -1,17 +1,24 @@
 import React from "react";
 import { useState } from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { removeReserved } from "../features/reserved/reservedSlice";
 
 import Header from "../widgets/Header/Header";
 import CategoryTabs from "../widgets/CategoryTabs/CategoryTabs";
 import ReservedTabs from "../widgets/ReservedTabs/ReservedTabs";
 import ReservedShopGroup from "../widgets/ReservedShopGroup/ReservedShopGroup";
 
-require("./styles/ReservedPage.css");
+import "./styles/ReservedPage.css";
 
 function ReservedPage() {
     const [activeTab, setActiveTab] = useState("reserved");
     const reservedItems = useSelector((state) => state.reserved.items);
+
+    const dispatch = useDispatch();
+
+    function handleRemoveReserved(productId) {
+        dispatch(removeReserved(productId));
+    }
 
     return (
         <>
@@ -31,6 +38,7 @@ function ReservedPage() {
                                     workHours="MO - FR: 9AM - 8PM | SA - SU: 9AM - 8PM"
                                     reservedTime="WED 14.04.2022 - FRI 16.04.2022"
                                     products={reservedItems}
+                                    onRemove={handleRemoveReserved}
                                 />
                             ) : (
                                 <p className="reserved-page__placeholder">No reserved products yet</p>

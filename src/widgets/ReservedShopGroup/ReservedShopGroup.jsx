@@ -1,7 +1,8 @@
 import React from "react";
 import "./ReservedShopGroup.css";
+import { Link } from "react-router-dom";
 
-function ReservedShopGroup({ shopName, location, workHours, reservedTime, products }) {
+function ReservedShopGroup({ shopName, location, workHours, reservedTime, products, onRemove }) {
     return (
         <section className="reserved-shop-group">
             <div className="reserved-shop-group__header">
@@ -29,11 +30,13 @@ function ReservedShopGroup({ shopName, location, workHours, reservedTime, produc
             <div className="reserved-shop-group__products">
                 {products.map((product) => (
                     <article className="reserved-product" key={product.id}>
-                        <img
-                            className="reserved-product__image"
-                            src={product.thumbnail}
-                            alt={product.title}
-                        />
+                        <Link key={product.id} to={`/products/${product.id}`}>
+                            <img
+                                className="reserved-product__image"
+                                src={product.thumbnail}
+                                alt={product.title}
+                            />
+                        </Link>
 
                         <div className="reserved-product__info">
                             <h3 className="reserved-product__title">{product.title}</h3>
@@ -64,6 +67,14 @@ function ReservedShopGroup({ shopName, location, workHours, reservedTime, produc
                             <p className="reserved-product__shipping">
                                 Free shipping from € 34,00
                             </p>
+
+                            <button
+                                className="reserved-product__button"
+                                type="button"
+                                onClick={() => onRemove(product.id)}
+                            >
+                                Remove from Reserved
+                            </button>
                         </div>
                     </article>
                 ))}
