@@ -30,15 +30,26 @@ const api = createApi({
                 body,
             }),
         }),
+        getCurrentUser: builder.query({
+            query: (token) => ({
+                url: "/auth/me",
+                method: "GET",
+                headers: {
+                    Authorization: `Bearer ${token}`,
+                },
+                credentials: "include",
+            }),
+        }),
     }),
 });
 
-const { useGetProductsQuery, useGetProductByIdQuery, useLoginMutation, useRegisterUserMutation } = api;
+const { useGetProductsQuery, useGetProductByIdQuery, useLoginMutation, useRegisterUserMutation, useGetCurrentUserQuery } = api;
 
 export {
     api,
     useGetProductsQuery,
     useGetProductByIdQuery,
     useLoginMutation,
-    useRegisterUserMutation
+    useRegisterUserMutation,
+    useGetCurrentUserQuery,
 };
