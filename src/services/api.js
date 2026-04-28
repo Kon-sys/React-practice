@@ -14,7 +14,7 @@ const api = createApi({
         }),
         login: builder.mutation({
             query: (body) => ({
-                url: "/auth/login",
+                url: "/user/login",
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

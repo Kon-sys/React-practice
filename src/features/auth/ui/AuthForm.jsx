@@ -24,6 +24,16 @@ function AuthForm() {
         confirmPassword: "",
     });
 
+    function getLocalUsers() {
+        return JSON.parse(localStorage.getItem("localUsers")) || [];
+    }
+
+    function saveLocalUser(user) {
+        const users = getLocalUsers();
+
+        localStorage.setItem("localUsers", JSON.stringify([...users, user]));
+    }
+
     function handleChange(event) {
         setForm({
             ...form,
@@ -37,6 +47,26 @@ function AuthForm() {
 
         try {
             if (mode === "login") {
+                const localUsers = getLocalUsers();
+
+                const localUser = localUsers.find(
+                    (user) =>
+                        user.username === form.username &&
+                        user.password === form.password
+                );
+
+                if (localUser) {
+                    dispatch(
+                        setCredentials({
+                            user: localUser,
+                            token: "local-user-token",
+                        })
+                    );
+
+                    navigate("/products");
+                    return;
+                }
+
                 const user = await login({
                     username: form.username,
                     password: form.password,
@@ -59,22 +89,39 @@ function AuthForm() {
                 return;
             }
 
-            const createdUser = await registerUser({
+            const localUsers = getLocalUsers();
+
+            const userExists = localUsers.some(
+                (user) => user.username === form.username
+            );
+
+            if (userExists) {
+                setErrorText("User with this username already exists");
+                return;
+            }
+
+            const newUser = {
+                id: Date.now(),
                 username: form.username,
                 email: form.email,
                 password: form.password,
-            }).unwrap();
+                firstName: form.username,
+                lastName: "",
+                image: "",
+            };
+
+            saveLocalUser(newUser);
 
             dispatch(
                 setCredentials({
-                    user: createdUser,
-                    token: "registered-user-token",
+                    user: newUser,
+                    token: "local-user-token",
                 })
             );
 
             navigate("/products");
         } catch (error) {
-            setErrorText("Invalid data. Check username and password.");
+            setErrorText("Invalid username or password");
         }
     }
 
