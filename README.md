@@ -59,3 +59,8 @@ dist
 ## API
 ### Product and user data are loaded from DummyJSON API:
 https://dummyjson.com
+
+## Deploys link
+```bash
+https://kon-sys.github.io/React-practice/products
+```
